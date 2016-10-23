@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+<%= google_webfonts_init({
+    google: ['Fira Sans', 'Roboto']
+  }) %>
+</head>
+<body>
+  <div id="container">
+    <% if current_user %>
+        <%= render "partials/nav2" %>
+    <% else %>
+      <%= render "partials/nav" %>
+    <% end %>
+    <%= yield %>
+    
+  </div>
+</body>
+</html>

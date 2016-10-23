@@ -1,0 +1,42 @@
+<%= bootstrap_form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-inline">
+  <div class="form-group">
+  <div class="field">
+     <%= f.select(:major, options_for_select([['CDM', 'CDM'], ['Business','Business'], ['Law', 'Law'], ['Sciences','Sciences']])) %>
+  </div>
+  <div class="field">
+    <%= f.text_field :course_num %>
+  </div>
+  <div class="field">
+    <%= f.text_field :course_name %>
+  </div>
+  <div class="field">
+    <%= f.select(:day, options_for_select([['MoWe', 'MoWe'], ['TuTh','TuTh']])) %>
+  </div>
+  <div class="field">
+    <%= f.select(:time, options_for_select([['8:00AM-9:30AM', '8:00AM-9:30AM'], ['9:40AM-11:10AM','9:40AM-11:10AM'], ['11:20AM-12:30PM','11:20AM-12:50PM'], ['1:00PM-2:30PM','1:00PM-2:30PM'], ['2:40PM-4:10PM','2:40PM-4:10PM']])) %>
+  </div>
+  <div class="field">
+    <%= f.select(:room, options_for_select([['CDM Rm 103', 'CDM Rm 103'], ['Student Center Rm 210','Student Center Rm 210'], ['Student Center Rm 230', 'Student Center Rm 230']])) %>
+  </div>
+  <div class="field">
+    <%= f.select(:instructor_name, options_for_select([['Winston Smith', 'Winston Smith'], ['Jard Bolt','Jared Bolt'], ['Jessica Down','Jessica Down'], ['Mary Turner','Mary Turner'], ['Bob Burger','Bob Burger']])) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

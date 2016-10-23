@@ -1,0 +1,30 @@
+
+<div class="student_info" >
+    <h1>Welcome <strong><%= current_user.first_name %> <%= current_user.last_name %></strong>! </h1>
+    
+    <p>
+      <strong>Email:</strong>
+      <%= current_user.email %>
+    </p>
+
+    <p>
+      <strong>Major:</strong>
+      <%= current_user.major %>
+    </p>
+    
+    <p>
+      <strong>Major:</strong>
+      <%= current_user.year %>
+    </p>
+    
+    <%= link_to "Register Now!", adminlist_path %>
+    
+    <br>
+    
+    <div>
+      <h2> Class Schedule</h2>
+      
+      
+    </div>
+    
+</div>

@@ -1,0 +1,18 @@
+    <div id="links_header">
+      <%= image_tag "universitypic.PNG", :class => "img" %>
+
+        <ul class="snip1217">
+          <% if current_page? (userhome_path) %>
+            <%= link_to "Home", userhome_path, :class => "a li" %>
+          <% else %>
+            <%= link_to "Home", adminhome_path, :class => "a li" %>
+          <%end%>
+        <%= link_to "Administrator", adminlogin_path, :class => "a li" %>
+        <%= link_to "Sign Up", new_user_path, :class => "a li" %>
+        <%= link_to "Log Out", logout_path, :class => "a li" %>
+        </ul>
+    </div>
+    
+    <div id="main_content_div">
+      
+    </div>
