@@ -32,9 +32,8 @@
               <td><%= user.email %></td>
               <td><%= user.major %></td>
               <td><%= user.year %></td>
-              <td><%= link_to 'Show', user %></td>
-              <td><%= link_to 'Edit', edit_user_path(user) %></td>
-              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Edit', edit_user_path(user), class:"btn btn-warning btn-sm pen2" %></td>
+              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm pen2" %></td>
             </tr>
           <% end %>
         </tbody>
