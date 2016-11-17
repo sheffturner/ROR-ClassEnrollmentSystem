@@ -3,16 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .loginform{
-  position:absolute;
-  left:550px;
-  top:190px;
-}
-
-.student_info{
-  position:absolute;
-  left:117px;
-  font-family: "Fira Sans";
-  
+  margin-right:auto;
+  margin-left:auto;
+  width:1200px;
+  background-color: #F8F8F8;
+  padding-top:5px;
+  padding-left:20px;
+  padding-right:20px;
+  height:calc(100vh - 130px);
+  height:-webkit-calc(100vh - 130px); /* google, safari */
+  height:-moz-calc(100vh - 130px); /* firefox */
+  border:1px solid black;
 }
 
 .invalid_notice{
@@ -24,8 +25,11 @@
 }
 
 .alert, .alert-success, .notice{
-  position:relative;
-  right:100px;
-  width:400px;
-  
+  position:absolute;
+  width:450px;
+  background-color:#F8F8F8;
+  border:none;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  color: #EB2126;
 }

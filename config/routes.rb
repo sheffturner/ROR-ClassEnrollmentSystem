@@ -1,9 +1,23 @@
 Rails.application.routes.draw do
 
+  get 'studentcourses/coursesout'
+  
+  get 'enrollsearch', to: 'studentcourses#studentnamein', as: 'enrollsearch'
+  
+  post 'studentcourses/coursesout'
+  
+  post 'studentcourses/studentnamein'
+
+  get 'enrollments/index'
+
+  get 'enrollment/index'
+
+  resources :enrollments
   resources :courses
   resources :admins
   get 'adminhome', to: 'admins#index', as: 'adminhome'
   get 'adminlist', to: 'admins#adminlist', as: 'adminlist'
+  get 'newadmin', to: 'admins#new', as: 'newadmin'
   
   resources :sessions, only:[:new, :new1, :create, :destroy]
   resources :adminsessions, only:[:new, :create, :destroy]
@@ -16,8 +30,18 @@ Rails.application.routes.draw do
   get 'newcourse', to: 'courses#new', as: 'newcourse'
   get 'userhome', to: 'users#index', as: 'userhome'
   get 'userlist', to: 'users#userlist', as: 'userlist'
+  get 'coursebymajor', to: 'courses#coursebymajor', as: 'coursebymajor'
+  get '/users/:id/classregis', to: 'users#classregis', as: 'classregis'
+  get 'love', to: 'student_enrollments#classregis', as: 'love'
+  get 'enroll', to: 'enrollments#index', as: 'enroll'
+  post "users/classregis"
 
-  resources :users
+  resources :users do
+    member do
+      patch :update_number_two
+      put :update_number_two
+    end
+  end
   get 'home', to:'landing_page#index', as: 'home'
 
   # The priority is based upon order of creation: first created -> highest priority.

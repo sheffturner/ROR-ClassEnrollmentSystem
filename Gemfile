@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'materialize-sass'
 gem 'google-webfonts-rails'
 
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

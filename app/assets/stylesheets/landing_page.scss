@@ -3,18 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .index_header{
-  position:relative;
-  left:117px;
-  top:30px;
+  margin-right:auto;
+  margin-left:auto;
   font-family: "Fira Sans";
   font-weight: bold;
-  font-size: 32px;
-  float: left;
+  font-size:32px;
+  width:75%;
+  padding-top:250px;
+  padding-bottom:250px;
+  text-align:center;
+  background-color: #F8F8F8;
+  height:calc(100vh - 130px);
+  height:-webkit-calc(100vh - 130px); /* google, safari */
+  height:-moz-calc(100vh - 130px); /* firefox */
+  padding: auto auto auto auto;
+
 }
 
-.qoute1_div{
+.openheader{
   position:relative;
-  border:1px solid black;
-  width:200px;
-  height:200px;
+  bottom:80px;
+}
+
+.img2{
+  width:600px;
+  position:relative;
+  bottom:190px;
+  
 }

@@ -1,9 +1,20 @@
 
-<div class="student_info" >
-<%= notice %>
-<h1>Welcome, Admin!</h1>
+  <div class="admin" >
+    <%= notice %>
+    <h2>Welcome, Admin!</h2>
+    <div class="wrapplink">
+    <div class="list">
+    <div class="datalink"><%= link_to "Admin List", adminlist_path, class:"btn btn-primary btn-lg pen size" %></div>
+    <div class="datalink"><%= link_to "Student List", userlist_path, class:"btn btn-primary btn-lg pen size" %></div>
+    <div class="datalink"><%= link_to "Course List", courses_path,class:"btn btn-primary btn-lg pen size" %></div>
+    <div class="datalink"><%= link_to "Enrollment List", enroll_path, class:"btn btn-primary btn-lg pen size" %></div>
+    </div>
+    
+    <div class="list2">
+    <div class="datalink"><%= link_to "Student Courses", enrollsearch_path, class:"btn btn-primary btn-lg pen size" %></div>
+    <div class="datalink"><%= link_to "Professor Courses", enrollsearch_path, class:"btn btn-primary btn-lg pen size" %></div>
+    </div>
+    
+    <div>
+  </div>
 
-<%= link_to "Admin List", adminlist_path %>
-<%= link_to "Student List", userlist_path %>
-<%= link_to "Course List", courses_path %>
-</div>

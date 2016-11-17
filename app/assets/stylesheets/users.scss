@@ -1,18 +1,82 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.regisform{
-  position:absolute;
-  left:425px;
-  top:190;
-  margin:0;
-  padding:0;
-  width:575px;
+.regisform3, .student_info{
+  margin-right:auto;
+  margin-left:auto;
+  width: 75%;
+  background-color: #F8F8F8;
+  padding-top:5px;
+  padding-left:20px;
+  padding-right:20px;
+  height:calc(100vh - 130px);
+  height:-webkit-calc(100vh - 130px); /* google, safari */
+  height:-moz-calc(100vh - 130px); /* firefox */
+  font-family: "Fira Sans";
+
 }
 
-.listing_users{
+.pen{
+  color: white!important;
+  background-color: #262161;
   position:relative;
-  left:117px;
-  border:1px solid black;
-  width:600px;
+  left:0px!important;
 }
+
+.row.fr{
+  width:40vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.student_info{
+  
+  font-family: "Fira Sans";
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #262161, #262161 12.5%, #EB2126 12.5%, #EB2126 25%, #262161 25%, #262161 37.5%, #EB2126 37.5%, #EB2126 50%, #262161 50%, #262161 62.5%, #EB2126 62.5%, #EB2126 75%, #262161 75%, #262161 87.5%, #EB2126 87.5%, #EB2126);
+  background-image: -moz-linear-gradient(left, #262161, #262161 12.5%, #EB2126 12.5%, #EB2126 25%, #262161 25%, #262161 37.5%, #EB2126 37.5%, #EB2126 50%, #262161 50%, #262161 62.5%, #EB2126 62.5%, #EB2126 75%, #262161 75%, #262161 87.5%, #EB2126 87.5%, #EB2126);
+  background-image: -o-linear-gradient(left, #262161, #262161 12.5%, #EB2126 12.5%, #EB2126 25%, #262161 25%, #262161 37.5%, #EB2126 37.5%, #EB2126 50%, #262161 50%, #262161 62.5%, #EB2126 62.5%, #EB2126 75%, #262161 75%, #262161 87.5%, #EB2126 87.5%, #EB2126);
+  background-image: linear-gradient(to right,#262161, #262161 12.5%, #EB2126 12.5%, #EB2126 25%, #262161 25%, #262161 37.5%, #EB2126 37.5%, #EB2126 50%, #262161 50%, #262161 62.5%, #EB2126 62.5%, #EB2126 75%, #262161 75%, #262161 87.5%, #EB2126 87.5%, #EB2126);
+}
+
+.btn{
+  position:relative;
+  left:20px;
+}
+.listing_users{
+  margin-right:auto;
+  margin-left:auto;
+  width:75%;
+  height:calc(100vh - 130px);
+   height:-webkit-calc(100vh - 130px); /* google, safari */
+   height:-moz-calc(100vh - 130px); /* firefox */
+    background-color: #F8F8F8;
+     padding-top:5px;
+   padding-left:20px;
+   padding-right:20px;
+}
+
+.checkbox_container {
+  display: inline-block;
+  vertical-align: -1px;
+  margin: 5px;
+ }
+.checkbox_container input {
+  display: inline;
+ }
+.checkbox_container .collection_check_boxes{
+  display: inline;
+  vertical-align: -5px;
+ }
+ 
+   .pppp{
+     float:right;
+   }

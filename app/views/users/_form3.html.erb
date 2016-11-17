@@ -1,0 +1,65 @@
+<script src="../javascripts/jquery-3.1.1.min.js"></script>
+
+<script>
+$('input[type=checkbox]').on('click', function (e) {
+    if ($('input[type=checkbox]:checked').length > 2) {
+        $(this).prop('checked', false);
+        alert("Please select only two courses");
+    }
+});
+</script>
+
+<div class="regisform3">
+  <h2>Enroll Today!</h2>
+<h3>Classes available in <%= current_user.major %></h3>
+<%= form_for @user, :url => update_number_two_user_path do |f| %>
+<div class="field">
+    <h4><%= f.label "Please Enroll In Two Classes:" %></h4>
+</div>
+
+    <table  class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Check</th>
+          <th>Course Number</th>
+          <th>Course Name</th>
+          <th>Course Professor</th>
+          <th>Time</th>
+          <th>Days</th>
+          <th>Room Number</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        
+     <%= f.collection_check_boxes :course_ids, Course.where(:major => current_user.major), :id , :course_num, {:item_wrapper_class => 'checkbox_container'} do |b| %> 
+       
+        
+        <tr>
+        <td> <%= b.check_box %></td>
+        <td><%= b.label %></td>
+        <td><%= b.object.course_name %></td>
+        <td><%= b.object.instructor_name %></td>
+        <td><%= b.object.time %></td>
+        <td><%= b.object.day %></td>
+        <td><%= b.object.room %></td>
+        
+         
+        
+         
+        
+         </tr>
+       <%end %>
+
+      </tbody>
+    </table>
+  
+  <div class="actions">
+    <%= f.submit "Enroll/Withdraw Classes", class:"btn btn-primary btn-lg pen"%>
+  </div>
+
+<% end %>
+
+</div>
+
+

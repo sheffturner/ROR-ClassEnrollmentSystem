@@ -1,30 +1,75 @@
-
 <div class="student_info" >
-    <h1>Welcome <strong><%= current_user.first_name %> <%= current_user.last_name %></strong>! </h1>
+ <%= notice %>
+    <h2>Welcome <strong><%= current_user.first_name %> <%= current_user.last_name %></strong>! </h2>
+    <br>
+  
     
+  
+  <p>  
+  <strong>Student ID: </strong>
+  <%= current_user.id %>
+  </p>
     <p>
-      <strong>Email:</strong>
-      <%= current_user.email %>
-    </p>
-
+   <strong>Email:</strong>
+     <%= current_user.email %>
+  </p>
     <p>
       <strong>Major:</strong>
       <%= current_user.major %>
     </p>
     
     <p>
-      <strong>Major:</strong>
+      <strong>Year:</strong>
       <%= current_user.year %>
     </p>
-    
-    <%= link_to "Register Now!", adminlist_path %>
+
+
+    <%= link_to "Enroll Now!", classregis_path(current_user.id), :class => "btn btn-primary btn-lg pen" %>
     
     <br>
+    <br>
+  
     
     <div>
-      <h2> Class Schedule</h2>
+      <h3> Class Schedule - Fall 2016</h3>
+      
+       <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Course Number</th>
+            <th>Course Name</th>
+             <th>Course Professor</th>
+             <th>Time</th>
+             <th>Day</th>
+             <th>Room Number</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <% @course_list.each do |user| %>
+            <tr>
+              <td><%=user.course_num%> </td>
+              <td><%=user.course_name%> </td>
+              <td><%=user.instructor_name%> </td>
+              <td><%= user.time %></td>
+              <td><%= user.day %></td>
+              <td><%= user.room %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
       
       
     </div>
     
+     <%= link_to "Add/Drop Classes", classregis_path(current_user.id), :class => "btn btn-primary btn-lg pen" %>
+    
 </div>
+<script src="../javascripts/jquery-3.1.1.min.js"></script>
+
+<script>
+  <% if params[:notice].present? %>
+    alert(<%= params[:notice] %>);
+  <% end %>
+</script>
+

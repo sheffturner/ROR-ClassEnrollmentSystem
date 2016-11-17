@@ -2,9 +2,50 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.listing_admin{
+.listing_admin, .admin{
+  margin-right:auto;
+  margin-left:auto;
+  width:75%;
+  height:calc(100vh - 130px);
+   height:-webkit-calc(100vh - 130px); /* google, safari */
+   height:-moz-calc(100vh - 130px); /* firefox */
+    background-color: #F8F8F8;
+     padding-top:5px;
+   padding-left:20px;
+   padding-right:20px;
+  font-family: "Fira Sans";
+}
+
+.list{
+    margin-left:auto;
+    margin-right:auto;
+    height:auto; 
+    width:auto;
+    float:left;
+}
+
+.list2{
+    margin-left:auto;
+    margin-right:auto;
+    height:auto; 
+    width:auto;
+}
+
+.wrapplink{
+ margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    width:55%;
+}
+
+.pen2{
+  color: black!important;
   position:relative;
-  left:117px;
-  border:1px solid black;
-  width:600px;
+  left:0px!important;
+}
+
+.size{
+ width:200px;
+ margin-top:20px;
+ margin-right:67px;
 }

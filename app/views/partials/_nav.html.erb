@@ -1,13 +1,24 @@
-    <div id="links_header">
-      <%= image_tag "universitypic.PNG", :class => "img" %>
-
-        <ul class="snip1217">
-        <%= link_to "Administrator", adminlogin_path, :class => "a li" %>
-        <%= link_to "Sign Up", new_user_path, :class => "a li" %>
-        <%= link_to "Student's Log In", login_path, :class => "a li" %>
-        </ul>
-    </div>
-    
-    <div id="main_content_div">
-      
-    </div>
+ <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a><%= image_tag "universitypic.PNG", :class => "img" %></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav snip1217 navbar-right">
+              <li class="color-me"><%= link_to "Home", home_path, :class => "a li" %></li>
+              <li class="color-me"><%= link_to "Administrator", adminlogin_path, :class => "a li" %></li>
+              <li class="color-me"><%= link_to "Sign Up", new_user_path, :class => "a li" %></li>
+              <li class="color-me"><%= link_to "Student's Log In", login_path, :class => "a li dif" %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+  </nav>
+  
+  
+  

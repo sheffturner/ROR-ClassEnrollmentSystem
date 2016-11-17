@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :classregis]
+  
+   
+
 
   # GET /users
   # GET /users.json
   def index
-
+    r = User.find_by_id(current_user.id)
+      @course_list = r.courses
   end
   
   def userlist
@@ -21,11 +25,15 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def classregis
+    
+  end
 
   # GET /users/1/edit
   def edit
   end
-
+  
   # POST /users
   # POST /users.json
   def create
@@ -56,6 +64,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_number_two
+    @user = User.find params[:id]
+
+    if @user.update(user_params)
+      redirect_to userhome_path, :notce => "Registration completed"
+    else
+      redirect_to userhome_path, :notice => "Try Again"
+    end
+  end
+
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
@@ -74,6 +92,10 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :major, :password, :password_confirmation, :year)
+      params.require(:user).permit(:first_name, :last_name, :email, :major, :password, :password_confirmation, :year, course_ids: [])
+    end
+    
+    def usercourse_params
+      params.require(:user).permit(course_ids:[])
     end
 end

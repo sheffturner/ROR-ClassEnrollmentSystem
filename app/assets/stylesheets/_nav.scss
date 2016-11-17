@@ -1,24 +1,40 @@
 .img{
   position:relative;
-  left:90px;
   top:22px;
-  float:left;
 }
 
-#links_header{
-
+.links_header{
+  margin-right:auto;
+  margin-left:auto;
   height:130px;
+  border-bottom: 2px solid #262161;
+
 }
 
-#main_content_div{
-  border:1px solid black;
-  position: absolute;
-  left:90px;
-  right:90px;
-  width:1200px;
-  height:500px;
+li{
+  color: black;
 }
 
+.navbar.navbar-default{
+  height:130px;
+  background-color: white!important;
+  margin-bottom:0;
+  
+}
+
+.navbar-header{
+  height:129px;
+}
+
+#navbar{
+
+padding-top:105px;
+}
+
+
+.col-md-2{
+  padding:0;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 .snip1217{
@@ -27,12 +43,8 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  position:relative;
-  top:90px;
-  left:730px;
-  width:600px;
-  
 }
+
 .snip1217 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -40,18 +52,21 @@
   transition: all 0.35s ease;
 }
 .snip1217.li {
-  display: inline-block;
-  list-style: outside none none;
+ 
   margin: 0.5em 1.5em;
   padding: 0;
 }
 .snip1217 .a {
   padding: 0.3em 0;
-  color: black;
+  color: black!important;
   position: relative;
   text-decoration: none;
-  display: inline-block;
   padding: 0 7px;
+  border-right:1px solid black;
+}
+
+.snip1217 .dif{
+  border:none;
 }
 .snip1217 a:before,
 .snip1217 a:after {

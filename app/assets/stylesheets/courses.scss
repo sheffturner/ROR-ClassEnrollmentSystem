@@ -1,7 +1,36 @@
 // Place all the styles related to the Courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.listing_courses{
+.listing_courses, .editform{
+  margin-right: auto;
+  margin-left: auto;
+  width:75%;
+  background-color: #F8F8F8;
+  padding-top:5px;
+  padding-left:20px;
+  padding-right:20px;
+}
+.changecol{
+  color:black!important;
+}
+.newcourse{
+  margin-right:auto;
+  margin-left:auto;
+  width: 87vw;
+  background-color: #F8F8F8;
+  padding-top:5px;
+  padding-left:20px;
+  padding-right:20px;
+  
+}
+
+
+.btn{
+  position:relative;
+  left:20px;
+}
+
+.major_courses{
   position:relative;
   left:117px;
   border:1px solid black;

@@ -20,6 +20,10 @@ class CoursesController < ApplicationController
   # GET /courses/1/edit
   def edit
   end
+  
+  def coursebymajor
+    @coursebymajor = Course.where(:major => current_user.major)
+  end
 
   # POST /courses
   # POST /courses.json

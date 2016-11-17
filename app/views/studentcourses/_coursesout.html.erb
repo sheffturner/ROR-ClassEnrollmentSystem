@@ -1,0 +1,18 @@
+
+<%= @student_name %>
+
+<center><table width= 65% border = 1>
+  <tr> 
+    <th>Course Name</th>
+    <th>Course Number</th>
+    <th>Course Professor</th>
+  </tr>
+  <% @course_list.each do |m| %>
+  <tr>
+    <td><%=m.course_name%> </td>
+    <td><%=m.course_num%> </td>
+    <td><%=m.instructor_name%> </td>
+  </tr>
+  <% end %>
+</table>
+</center>

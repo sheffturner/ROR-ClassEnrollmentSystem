@@ -1,0 +1,26 @@
+<div class="student_info" >
+<h2><%= @student_name %>'s Courses - Fall 2016</h2>
+<div>
+<center><table class="table table-bordered table-striped">
+  <tr> 
+    <th>Course Number</th>
+    <th>Course Name</th>
+    <th>Course Professor</th>
+    <th>Time</th>
+    <th>Day</th>
+    <th>Room Number</th>
+  </tr>
+  <% @course_list.each do |m| %>
+  <tr>
+    <td><%=m.course_num%> </td>
+    <td><%=m.course_name%> </td>
+    <td><%=m.instructor_name%> </td>
+    <td><%=m.time %></td>
+    <td><%=m.day %></td>
+    <td><%=m.room %></td>
+  </tr>
+  <% end %>
+</table>
+</center>
+</div>
+</div>

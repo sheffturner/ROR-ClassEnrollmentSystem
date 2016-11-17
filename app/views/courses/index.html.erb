@@ -1,44 +1,57 @@
-<div class="listing_courses">
-<p id="notice"><%= notice %></p>
 
-<%= link_to "Add New Course", newcourse_path %>
+  <div class="listing_courses container-fluid">
+    <div class="row">
+      <div class="col-md-12"> <h2>Course Offerings - Admin</h2> </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"> <p id="notice"><%= notice %></p> </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"> 
+      <h4><%= link_to newcourse_path, class: "changecol" do %>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true">&nbsp;</span>New Course
+      <% end %>
+      </h4> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Major</th>
+              <th>Course num</th>
+              <th>Course name</th>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Room</th>
+              <th>Instructor name</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+    
+          <tbody>
+            <% @courses.order(major: :asc).each do |course| %>
+              <tr>
+                <td><%= course.major %></td>
+                <td><%= course.course_num %></td>
+                <td><%= course.course_name %></td>
+                <td><%= course.day %></td>
+                <td><%= course.time %></td>
+                <td><%= course.room %></td>
+                <td><%= course.instructor_name %></td>
+                <td><%= link_to 'Edit', edit_course_path(course), class:"btn btn-warning btn-sm pen2"%></td>
+                <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm pen2" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+  <br>
+  
+  <%= link_to "Back", adminhome_path %>
+  
+  </div>
 
-<h1>Listing Courses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Major</th>
-      <th>Course num</th>
-      <th>Course name</th>
-      <th>Day</th>
-      <th>Time</th>
-      <th>Room</th>
-      <th>Instructor name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.major %></td>
-        <td><%= course.course_num %></td>
-        <td><%= course.course_name %></td>
-        <td><%= course.day %></td>
-        <td><%= course.time %></td>
-        <td><%= course.room %></td>
-        <td><%= course.instructor_name %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to "Back", adminhome_path %>
-
-</div>

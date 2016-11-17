@@ -1,8 +1,12 @@
 class User < ActiveRecord::Base
+  has_many :courses, :through => :enrollments
+  has_many :enrollments
   
+  accepts_nested_attributes_for :courses
   
   has_secure_password
   
+  #validations for sign up form
   validates :first_name,
             presence: true
             
@@ -21,5 +25,7 @@ class User < ActiveRecord::Base
   def to_s
     "{first_name} {last_name}"
   end
+  
+ 
   
 end

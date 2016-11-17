@@ -3,6 +3,7 @@ class AdminsController < ApplicationController
 
   # GET /admins
   # GET /admins.json
+  # admin top page
   def index
    
   end

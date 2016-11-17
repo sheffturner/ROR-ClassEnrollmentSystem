@@ -1,0 +1,50 @@
+<div class="major_courses">
+  <%=bootstrap_form_for userhome_path do |f|%>
+<h1>Courses In <%= current_user.major %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Course num</th>
+      <th>Course name</th>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Room</th>
+      <th>Instructor name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coursebymajor.each do |course| %>
+      <tr>
+        <td><%= f.check_box course.id %></td>
+        <td><%= course.course_num %></td>
+        <td><%= course.course_name %></td>
+        <td><%= course.day %></td>
+        <td><%= course.time %></td>
+        <td><%= course.room %></td>
+        <td><%= course.instructor_name %></td>
+        <td><%= link_to 'Show', course %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+  <%=bootstrap_form_for userhome_path do |f| %>
+   <div class="field ">
+      <% @coursebymajor.each do |course| %>
+        <%= check_box_tag "user[courses_ids][]", course.id %>
+        <%= course.course_num %> <%= course.course_name %> <%= course.day %><%= course.time %>
+        <%= course.room %> <%= course.instructor_name %><br>
+      <% end %>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,35 @@
+ <div class="loginform">
+  <div class="invalid_notice"><%= notice %></div><br>
+  <%=form_tag(studentcourses_coursesout_path, :controller => "studentcourses", :action => "coursesout", :method => "post") do %>
+    <div class="row ff">
+      <div class="col-md-12">
+        <h2>Search: Student's Courses</h2>
+        <hr class="colorgraph">
+					  	<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						  <%= text_field_tag :student_name_in, "", class: "form-control input-lg", tabindex: "5", hide_label: true, placeholder: "First Name" %>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						  <%= text_field_tag :last, "", class: "form-control input-lg", tabindex: "5", hide_label: true, placeholder: "Last Name" %>
+					</div>
+				</div>
+			</div>
+        <hr class="colorgraph">
+			<div class="row">
+			  <div class="col-md-2"></div>
+			  <div class="col-xs-12 col-md-6">
+				<%= submit_tag "View Courses", class: "btn btn-primary btn-block btn-lg", tabindex:"6" %>
+				 <div class="col-md-2"></div>
+				</div>
+			</div>
+      </div>
+    </div>
+  
+  <%end%>
+  
+  
+
+</div>

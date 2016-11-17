@@ -1,9 +1,20 @@
 <div class="listing_admin">
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Admins</h1>
-
-<table>
+  <div class="row">
+      <div class="col-md-12"> <h2>Admin Listing</h2> </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12"> <p id="notice"><%= notice %></p> </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12"> 
+      <h4><%= link_to newadmin_path, class: "changecol" do %>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true">&nbsp;</span>New Admin
+      <% end %>
+      </h4> 
+      </div>
+  <div class="row">
+      <div class="col-md-12 table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Email</th>
@@ -22,10 +33,11 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
 
 <br>
 
-<%= link_to 'New Admin', new_admin_path %>
 <%= link_to 'Back', adminhome_path %>
 
 </div>
