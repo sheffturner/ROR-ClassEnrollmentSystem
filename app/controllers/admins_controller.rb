@@ -1,5 +1,7 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
+  before_filter :authorizeadmin, only: [:index, :new, :userlist, :adminlist, :classregis, :edit]
+   before_filter :set_cache_buster
 
   # GET /admins
   # GET /admins.json

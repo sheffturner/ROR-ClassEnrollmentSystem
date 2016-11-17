@@ -1,5 +1,9 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+    before_filter :authorizeadmin, only: [:index, :new]
+     before_filter :set_cache_buster
+
+  
 
   # GET /courses
   # GET /courses.json

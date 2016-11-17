@@ -1,4 +1,7 @@
 class StudentcoursesController < ApplicationController
+   before_filter :authorizeadmin, only: [:studentnamein, :coursesout]
+    before_filter :set_cache_buster
+
   def studentnamein
     
   end

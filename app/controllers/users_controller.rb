@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy, :classregis]
+  before_filter :authorizestudent, only: [:index, :show, :classregis]
+  before_filter :authorizeadmin, only: [:userlist, :edit]
+   before_filter :set_cache_buster
+
   
    
 
