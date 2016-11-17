@@ -1,33 +1,32 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.loginform{
+.loginform {
   margin-right:auto;
   margin-left:auto;
-  width:1200px;
+  width: 75%;
   background-color: #F8F8F8;
   padding-top:5px;
   height:calc(100vh - 130px);
   height:-webkit-calc(100vh - 130px); /* google, safari */
   height:-moz-calc(100vh - 130px); /* firefox */
+ }
 
-}
+ 
+.invalid_notice {
+  position: relative;
+  left: 117px;
+  top: 15px;
+  font-family: "Fira Sans";
+  font-size: 20px; }
 
-.invalid_notice{
-  position:relative;
-  left:117px;
-  top:15px;
+.alert, .alert-success, .notice {
+  position: absolute;
+  width: 450px;
+  background-color: #F8F8F8;
+  border: none;
   font-family: "Fira Sans";
   font-size: 20px;
-}
+  color: #EB2126; }
 
-.alert, .alert-success, .notice{
-  position:absolute;
-  width:450px;
-  background-color:#F8F8F8;
-  border:none;
-  font-family: "Fira Sans";
-  font-size: 20px;
-  color: #EB2126;
-}
+/*# sourceMappingURL=sessions.css.map */
